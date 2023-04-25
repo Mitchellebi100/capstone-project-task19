@@ -25,6 +25,6 @@ jobs:
       - name: Build Image 
         run: docker build -t task_manager ./
       - name: Set tag
-        run: docker tag task_manager Mitchell100/task_manager
+        run: docker tag task_manager mitchell100/task_manager
       - name: Push image
-        run: docker push Mitchell100/task_manager
+        run: docker push mitchell100/task_manager
