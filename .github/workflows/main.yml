@@ -23,10 +23,8 @@ jobs:
           images: my-docker-hub-namespace/my-docker-hub-repository
 
       - name: Build Image 
-        run: docker build -t python-app ./
-      - name: Run ap
-        run: docker run python-app
+        run: docker build -t task_manager ./
       - name: Set tag
-        run: docker tag python-app Mitchell100/python-app
+        run: docker tag task_manager Mitchell100/task_manager
       - name: Push image
-        run: docker push Mitchell100/python-app
+        run: docker push Mitchell100/task_manager
