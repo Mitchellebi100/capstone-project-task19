@@ -23,8 +23,8 @@ jobs:
           images: my-docker-hub-namespace/my-docker-hub-repository
 
       - name: Build Image 
-        run: docker build -t task_manager ./
+        run: docker build -t ${{ secrets.PROJECT_NAME }} ./
       - name: Set tag
-        run: docker tag task_manager mitchell100/task_manager
+        run: docker tag ${{ secrets.PROJECT_NAME }} mitchell100/${{ secrets.PROJECT_NAME }}
       - name: Push image
-        run: docker push mitchell100/task_manager
+        run: docker push mitchell100/${{ secrets.PROJECT_NAME }}
