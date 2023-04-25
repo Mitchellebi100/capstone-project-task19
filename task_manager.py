@@ -20,7 +20,7 @@ TaskList = []
 
 count = 1
 
-with open('user.txt', 'r+') as file1:  # Open the user.txt file
+with open('user.txt', 'r+') as file1:  # Open the user.txt file.
     for lines in file1:
         newline = lines.strip('\n')  
         SplitLine = newline.split(", ")  
